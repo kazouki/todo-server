@@ -1,14 +1,15 @@
 const express = require("express");
 const loggerMiddleWare = require("morgan");
 const corsMiddleWare = require("cors");
+const bodyParser = require("body-parser");
 
 const app = express();
 app.use(corsMiddleWare());
+const bodyParserMiddleWare = express.json();
+app.use(bodyParserMiddleWare);
 
-app.get("/list/:listId", (req, res) => {
-  console.log(req.params.listId);
-  res.send({ status: "ok" });
-});
+const listRouter = require("./routers/list");
+app.use("/lists", listRouter);
 
 app.listen(6001, () => {
   console.log(`Listening on port: 6001`);
