@@ -13,10 +13,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   item.init(
     {
-      title: DataTypes.STRING,
+      title: { type: DataTypes.STRING, allowNull: false },
       content: DataTypes.STRING,
-      listId: DataTypes.INTEGER,
-      done: DataTypes.BOOLEAN,
+      listId: { type: DataTypes.INTEGER, allowNull: false },
+      done: { type: DataTypes.BOOLEAN, defaultValue: false },
+      icon: { type: DataTypes.INTEGER, defaultValue: 1, allowNull: false },
     },
     {
       sequelize,

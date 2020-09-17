@@ -32,6 +32,42 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          title: "add state management",
+          content: "decide whether to use redux or context",
+          listId: 3,
+          done: false,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "replace laptop battery",
+          content: "find the best price of all the dealers",
+          listId: 3,
+          done: false,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "solve the ref warnings",
+          content: "checkout all the stackoverflow stuff on ref warnings",
+          listId: 3,
+          done: false,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          title: "deploy on AWS",
+          content: "find the best documentation for manual setup",
+          listId: 2,
+          done: false,
+
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );

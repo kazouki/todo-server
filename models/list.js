@@ -13,8 +13,14 @@ module.exports = (sequelize, DataTypes) => {
   }
   list.init(
     {
-      name: DataTypes.STRING,
-      status: DataTypes.BOOLEAN,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        defaultValue: "Todo List",
+      },
+      status: {
+        type: DataTypes.BOOLEAN,
+      },
     },
     {
       sequelize,
