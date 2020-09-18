@@ -10,7 +10,7 @@ module.exports = {
           content: "bring money for the machine",
           listId: 1,
           done: false,
-
+          icon: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -19,7 +19,7 @@ module.exports = {
           content: "ask the bike shop for type of tyre",
           listId: 1,
           done: false,
-
+          icon: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -28,7 +28,7 @@ module.exports = {
           content: "take recipe book from supermarket",
           listId: 1,
           done: false,
-
+          icon: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -37,7 +37,7 @@ module.exports = {
           content: "decide whether to use redux or context",
           listId: 3,
           done: false,
-
+          icon: 4,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -46,7 +46,7 @@ module.exports = {
           content: "find the best price of all the dealers",
           listId: 3,
           done: false,
-
+          icon: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -55,7 +55,7 @@ module.exports = {
           content: "checkout all the stackoverflow stuff on ref warnings",
           listId: 3,
           done: false,
-
+          icon: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -64,7 +64,7 @@ module.exports = {
           content: "find the best documentation for manual setup",
           listId: 2,
           done: false,
-
+          icon: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },

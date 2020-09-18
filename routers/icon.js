@@ -1,24 +1,19 @@
 const { Router } = require("express");
 const Item = require("../models").item;
-const List = require("../models").list;
 
 const router = new Router();
 
-router.get("/:listId", async (req, res, next) => {
+router.post("/:itemId", async (req, res, next) => {
+  //   console.log(req);
   try {
-    const list = await List.findByPk(req.params.listId, {
-      include: [Item],
-      order: [["updatedAt", "DESC"]],
-    });
-    res.send({ list });
+    const item = await Item.findByPk(req.params.itemId);
+    console.log("icon worked");
+    res.send({ item });
   } catch (error) {
     next(error);
   }
   return null;
 });
-
-router.post("/", async (req, res, next) => {});
-
 router.delete("/", async (req, res, next) => {});
 
 router.put("/", async (req, res, next) => {});
