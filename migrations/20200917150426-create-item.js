@@ -8,18 +8,11 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      title: {
-        type: Sequelize.STRING,
-      },
-      content: {
-        type: Sequelize.STRING,
-      },
-      listId: {
-        type: Sequelize.INTEGER,
-      },
-      done: {
-        type: Sequelize.BOOLEAN,
-      },
+      title: { type: Sequelize.STRING, allowNull: false },
+      content: Sequelize.STRING,
+      listId: { type: Sequelize.INTEGER, allowNull: false },
+      done: { type: Sequelize.BOOLEAN, defaultValue: false },
+      icon: { type: Sequelize.INTEGER, defaultValue: 1, allowNull: false },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
