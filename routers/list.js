@@ -17,6 +17,19 @@ router.get("/:listId", async (req, res, next) => {
   return null;
 });
 
+router.get("/", async (req, res, next) => {
+  try {
+    const lists = await List.findAll({
+      include: [Item],
+      order: [["updatedAt", "DESC"]],
+    });
+    res.send({ lists });
+  } catch (error) {
+    next(error);
+  }
+  return null;
+});
+
 router.post("/", async (req, res, next) => {});
 
 router.delete("/", async (req, res, next) => {});
