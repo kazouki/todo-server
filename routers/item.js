@@ -27,6 +27,7 @@ router.delete("/:itemId", async (req, res, next) => {
       if (item) {
         const deleted = await item.destroy();
       }
+      res.send({ deleted });
     } catch (error) {
       next(error);
     }
@@ -34,6 +35,18 @@ router.delete("/:itemId", async (req, res, next) => {
   return null;
 });
 
-router.put("/", async (req, res, next) => {});
+router.put("/note", async (req, res, next) => {
+  console.log("note called with req", req.body);
+  const { itemId, text } = req.body;
+  if (itemId && text) {
+    try {
+      const item = await Item.findByPk(itemId);
+      const updated = item.update({ content: text });
+      res.send({ updated });
+    } catch (e) {
+      next(e);
+    }
+  }
+});
 
 module.exports = router;
